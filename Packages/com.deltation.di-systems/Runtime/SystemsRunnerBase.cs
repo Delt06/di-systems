@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using DELTation.DIFramework.Lifecycle;
 using JetBrains.Annotations;
 
@@ -50,16 +52,24 @@ namespace DELTation.DIFramework.Systems
         protected void Add<[MeansImplicitUse] T>() where T : class, ISystem
         {
             var system = Di.Create<T>();
-            // ReSharper disable ConvertIfStatementToSwitchStatement
-            if (system is IInitSystem initSystem)
-                _initSystems.Add(initSystem);
-            if (system is IRunSystem runSystem)
-                _runSystems.Add(runSystem);
-            if (system is IDestroySystem destroySystem)
-                _destroySystems.Add(destroySystem);
-            if (system is ILateRunSystem lateRunSystem)
-                _lateRunSystems.Add(lateRunSystem);
-            // ReSharper restore ConvertIfStatementToSwitchStatement
+            Add(system);
+        }
+
+        protected void Add([NotNull] ISystem system)
+        {
+            if (system == null) throw new ArgumentNullException(nameof(system));
+
+            TryAddSystem(_initSystems, system);
+            TryAddSystem(_runSystems, system);
+            TryAddSystem(_destroySystems, system);
+            TryAddSystem(_lateRunSystems, system);
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        private static void TryAddSystem<T>(ICollection<T> systems, ISystem system) where T : class, ISystem
+        {
+            if (system is T castedSystem)
+                systems.Add(castedSystem);
         }
     }
 }
