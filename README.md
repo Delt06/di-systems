@@ -72,8 +72,8 @@ public class DiCompositionRoot : DependencyContainerBase
 }
 ```
 
-Do not forget to attach a `ContainerLifecyle` for your custom container:
+Do not forget to attach a `ContainerLifecyle` for your custom container:  
 ![Container Lifecycle](Documentation/container-lifecycle.jpg)
 
-Run the game and check the console output:
+Run the game and check the console output:  
 ![Console Output](Documentation/hello-di-systems.jpg)
