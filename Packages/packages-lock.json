@@ -1,11 +1,5 @@
 {
   "dependencies": {
-    "com.deltation.new-package": {
-      "version": "file:com.deltation.new-package",
-      "depth": 0,
-      "source": "embedded",
-      "dependencies": {}
-    },
     "com.unity.collab-proxy": {
       "version": "1.11.2",
       "depth": 0,
@@ -85,6 +79,12 @@
         "com.unity.modules.ui": "1.0.0",
         "com.unity.modules.imgui": "1.0.0"
       }
+    },
+    "di-systems": {
+      "version": "file:com.deltation.di-systems",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",
