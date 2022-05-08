@@ -1,0 +1,19 @@
+{
+    "name": "DELTation.DIFramework.Systems.Tests",
+    "rootNamespace": "DELTation.DIFramework.Systems",
+    "references": [
+        "GUID:2381da2088b51bb4e9cd720c600c4a2f",
+        "GUID:7661adf0dcc98034093743fe3a566d1a"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
