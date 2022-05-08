@@ -1,1 +1,17 @@
-{"name":"DELTation.DIFramework.Systems","rootNamespace":"DELTation.DIFramework.Systems"}
+{
+    "name": "DELTation.DIFramework.Systems",
+    "rootNamespace": "DELTation.DIFramework.Systems",
+    "references": [
+        "GUID:1b60fcce313931d4f9eefc7f1c079778",
+        "GUID:7661adf0dcc98034093743fe3a566d1a"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
